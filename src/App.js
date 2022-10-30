@@ -201,11 +201,11 @@ function App() {
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+              <StyledLogo alt={"logo"} src={"https://gateway.pinata.cloud/ipfs/QmY3NRXq2n1WtztkRXnaC4bH4UbNo5kFSy5ZWwN6Fx9xQ5/1.gif"} />
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+                      <StyledImg alt={"example"} src={"https://gateway.pinata.cloud/ipfs/QmY3NRXq2n1WtztkRXnaC4bH4UbNo5kFSy5ZWwN6Fx9xQ5/6.gif"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
