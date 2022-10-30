@@ -66,9 +66,9 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 200px;
+  width: 150px;
   @media (min-width: 767px) {
-    width: 300px;
+    width: 200px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
@@ -79,12 +79,12 @@ export const StyledImg = styled.img`
   border: 4px dashed var(--secondary);
   background-color: var(--accent);
   border-radius: 100%;
-  width: 200px;
+  width: 100px;
   @media (min-width: 900px) {
-    width: 250px;
+    width: 150px;
   }
   @media (min-width: 1000px) {
-    width: 300px;
+    width: 200px;
   }
   transition: width 0.5s;
 `;
@@ -198,8 +198,8 @@ function App() {
       <s.Container
         flex={1}
         ai={"center"}
-        style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+              style={{ padding: 24, backgroundColor: "#302e1e" }}
+        
       >
               <StyledLogo alt={"logo"} src={"https://gateway.pinata.cloud/ipfs/QmY3NRXq2n1WtztkRXnaC4bH4UbNo5kFSy5ZWwN6Fx9xQ5/1.gif"} />
         <s.SpacerSmall />
@@ -373,7 +373,7 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               alt={"example"}
-              src={"/config/images/example.gif"}
+                          src={"https://gateway.pinata.cloud/ipfs/QmY3NRXq2n1WtztkRXnaC4bH4UbNo5kFSy5ZWwN6Fx9xQ5/6.gif"}
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
@@ -383,7 +383,7 @@ function App() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "var(--primary-text)",
+              color: "white",
             }}
           >
             Please make sure you are connected to the right network (
@@ -394,7 +394,7 @@ function App() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "var(--primary-text)",
+              color: "white",
             }}
           >
             We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
