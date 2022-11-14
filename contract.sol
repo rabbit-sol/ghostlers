@@ -112,15 +112,7 @@ contract YourNftToken is ERC721AQueryable, Ownable, ReentrancyGuard {
   function mint(uint256 _mintAmount) public payable mintCompliance(_mintAmount) mintPriceCompliance(_mintAmount) {
     require(!paused, 'The contract is paused!');
 
-    if(whitelistMintEnabled==false){
-     
-      _safeMint(_msgSender(), _mintAmount);
-    }
-    else if(whitelistMintEnabled==true){
-      require(whitelist[msg.sender], "NOT_IN_WHITELIST");
-      _safeMint(_msgSender(), _mintAmount);
-    }
-  
+    _safeMint(_msgSender(), _mintAmount);
 
   }
   

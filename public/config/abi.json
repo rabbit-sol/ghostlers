@@ -32,11 +32,6 @@
   },
   {
     "inputs": [],
-    "name": "InvalidQueryRange",
-    "type": "error"
-  },
-  {
-    "inputs": [],
     "name": "MintERC2309QuantityExceedsLimit",
     "type": "error"
   },
@@ -289,80 +284,17 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
     ],
-    "name": "explicitOwnershipOf",
+    "name": "excludedList",
     "outputs": [
       {
-        "components": [
-          {
-            "internalType": "address",
-            "name": "addr",
-            "type": "address"
-          },
-          {
-            "internalType": "uint64",
-            "name": "startTimestamp",
-            "type": "uint64"
-          },
-          {
-            "internalType": "bool",
-            "name": "burned",
-            "type": "bool"
-          },
-          {
-            "internalType": "uint24",
-            "name": "extraData",
-            "type": "uint24"
-          }
-        ],
-        "internalType": "struct IERC721A.TokenOwnership",
+        "internalType": "bool",
         "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256[]",
-        "name": "tokenIds",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "explicitOwnershipsOf",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "address",
-            "name": "addr",
-            "type": "address"
-          },
-          {
-            "internalType": "uint64",
-            "name": "startTimestamp",
-            "type": "uint64"
-          },
-          {
-            "internalType": "bool",
-            "name": "burned",
-            "type": "bool"
-          },
-          {
-            "internalType": "uint24",
-            "name": "extraData",
-            "type": "uint24"
-          }
-        ],
-        "internalType": "struct IERC721A.TokenOwnership[]",
-        "name": "",
-        "type": "tuple[]"
+        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -425,8 +357,40 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "maxMint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "maxMintAmountPerTx",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxMintPerUser",
     "outputs": [
       {
         "internalType": "uint256",
@@ -548,6 +512,19 @@
       }
     ],
     "name": "removeFromWhitelist",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "removeUnlimitedMintAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -791,54 +768,6 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address"
-      }
-    ],
-    "name": "tokensOfOwner",
-    "outputs": [
-      {
-        "internalType": "uint256[]",
-        "name": "",
-        "type": "uint256[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "start",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "stop",
-        "type": "uint256"
-      }
-    ],
-    "name": "tokensOfOwnerIn",
-    "outputs": [
-      {
-        "internalType": "uint256[]",
-        "name": "",
-        "type": "uint256[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [],
     "name": "totalSupply",
     "outputs": [
@@ -883,6 +812,19 @@
       }
     ],
     "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "unlimitedMintAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

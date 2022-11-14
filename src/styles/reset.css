@@ -167,3 +167,14 @@ div {
   user-select: none;
   -o-user-select: none;
 }
+
+
+input {
+    position: relative;
+    font-size: 1.3em;
+     background: linear-gradient(21deg, #cf9c9c, #64b3a4);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 9999em;
+   
+}

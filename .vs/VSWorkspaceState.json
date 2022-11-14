@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\config",
     "\\src"
   ],
+  "SelectedNode": "\\merkletree.jsx",
   "PreviewInSolutionExplorer": false
 }
