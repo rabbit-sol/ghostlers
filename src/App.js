@@ -282,7 +282,7 @@ function App() {
         let gasLimit = CONFIG.GAS_LIMIT;
         let maxMint = document.getElementById("setMaxMintperWallet").value
         blockchain.smartContract.methods
-            .setMaxMintperWallet(maxMint)
+            .setMaxMintper(maxMint)
             .send({
                 gasLimit: gasLimit,
                 to: CONFIG.CONTRACT_ADDRESS,
