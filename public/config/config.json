@@ -1,5 +1,5 @@
 {
-  "CONTRACT_ADDRESS": "0x6EC7d9b036823411f517155719a038440ddD3401",
+  "CONTRACT_ADDRESS": "0xD7E726B879f1835e7D80C5646B19728b9A2fb90E",
   "SCAN_LINK": "https://goerli.infura.io/v3/",
   "NETWORK": {
     "NAME": "Goerli test network",
@@ -10,9 +10,9 @@
   "SYMBOL": "ghst",
   "MAX_SUPPLY": 15,
   "WEI_COST": 1000000000000000,
-  "DISPLAY_COST": 0.01,
+  "DISPLAY_COST": 0,
   "GAS_LIMIT": 90000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
+  "MARKETPLACE_LINK": "https://opensea.io/",
   "SHOW_BACKGROUND": true
 }
