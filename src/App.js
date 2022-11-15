@@ -9,15 +9,15 @@ const truncate = (input, len) =>
     input.length > len ? `${input.substring(0, len)}...` : input;
 
 export const StyledButton = styled.button`
-  padding: 10px;
+  font-size:20px;
   border-radius: 50px;
   border: none;
   background-color: #7c2d2d;
-  padding: 10px;
+  padding: 12px;
   font-weight: bold;
-width:200px !important;
+width:250px !important;
   color: var(--secondary-text);
-  width: 100px;
+  width: 200px;
   cursor: pointer;
 margin-top:10px;
   box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
@@ -27,6 +27,7 @@ margin-top:10px;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+
   }
 `;
 
@@ -528,6 +529,39 @@ function App() {
             .then(function (info) {
                 console.log("info: ", info);
                 document.getElementById('lastInfo').innerHTML = parseFloat(info).toFixed(3) / oneEther + "ether";
+            });
+    }
+
+    const showMintStatus = () => {
+
+        blockchain.smartContract.methods.
+            paused().
+            call()
+            .then(function (info) {
+                console.log("info: ", info);
+                if (info == false) {
+                    document.getElementById('showMintStatus').innerHTML = "Mint Live";
+                }
+                else  {
+                    document.getElementById('showMintStatus').innerHTML = "Mint Paused";
+                }
+               
+            });
+    }
+    const showMintStage = () => {
+
+        blockchain.smartContract.methods.
+            whitelistMintEnabled().
+            call()
+            .then(function (info) {
+                console.log("info: ", info);
+                if (info == false) {
+                    document.getElementById('showMintStage').innerHTML = "Whitelist Mint Enabled";
+                }
+                else  {
+                    document.getElementById('showMintStage').innerHTML = "Public Mint enabled";
+                }
+               
             });
     }
 
@@ -1128,7 +1162,48 @@ function App() {
                                             >
                                                 {claimingNft ? "BUSY" : "Withdraw"}
                                             </StyledButton>
-                                        </s.Container>
+                                                </s.Container>
+
+
+                                                {/*//////      Minting Status status    ////////////*/}
+                                                <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                                                    <StyledButton
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            showMintStatus();
+                                                            getData();
+                                                        }}>
+                                                        Minting Status
+                                                    </StyledButton>
+                                                   
+
+                                                    <s.TextDescription id="showMintStatus"
+                                                            style={{ textAlign: "center", color: "var(--accent-text)", backgroundColor: "black", marginTop: "5px" }}
+                                                        >
+                                                            
+                                                        </s.TextDescription>
+                                                  
+
+                                                </s.Container>
+
+                                                {/*//////      Minting Stage    ////////////*/}
+                                                <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                                                    <StyledButton
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            showMintStage();
+                                                            getData();
+                                                        }}>
+                                                        Minting Stage
+                                                    </StyledButton>
+                                                    <s.TextDescription
+                                                        style={{ textAlign: "center", color: "var(--accent-text)", backgroundColor: "black", marginTop: "5px" }}
+                                                    >
+                                                        <h3 id="showMintStage"> </h3>
+                                                    </s.TextDescription>
+
+
+                                                </s.Container>
 
 
 

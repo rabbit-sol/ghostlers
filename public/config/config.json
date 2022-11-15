@@ -1,6 +1,6 @@
 {
   "CONTRACT_ADDRESS": "0xD7E726B879f1835e7D80C5646B19728b9A2fb90E",
-  "SCAN_LINK": "https://goerli.infura.io/v3/",
+  "SCAN_LINK": "https://goerli.etherscan.io/address/0xd7e726b879f1835e7d80c5646b19728b9a2fb90e",
   "NETWORK": {
     "NAME": "Goerli test network",
     "SYMBOL": "GoerliETH",
