@@ -169,6 +169,7 @@ function App() {
 
         let totalGasLimit = String(gasLimit);
         let address = document.getElementById("giveawayNft").value
+        let quanity = document.getElementById("giveawayaAmount").value
 
         console.log("Gas limit: ", totalGasLimit);
         setFeedback(`giving away ${CONFIG.NFT_NAME}...`);
@@ -176,7 +177,7 @@ function App() {
 
 
         blockchain.smartContract.methods
-            .mintForAddress(1, address)
+            .mintForAddress(quanity, address)
             .send({
                 gasLimit: String(totalGasLimit),
                 to: CONFIG.CONTRACT_ADDRESS,
@@ -1058,11 +1059,18 @@ function App() {
                                         <s.Container ai={"center"} jc={"center"} fd={"row"}>
                                             <input
                                                 type="text"
-                                                id="giveawayNft"
+                                                        id="giveawayaNft"
 
                                                 placeholder="giveaway address"
 
-                                            />
+                                                    />
+                                                    <input
+                                                        type="text"
+                                                        id="giveawayaAmount"
+
+                                                        placeholder="giveaway amount"
+
+                                                    />
                                             <StyledButton
                                                 onClick={(e) => {
                                                     e.preventDefault();
@@ -1072,7 +1080,10 @@ function App() {
                                                 }}>
                                                 Giveaway Nft
                                             </StyledButton>
-                                        </s.Container>
+                                                </s.Container>
+
+
+
 
                                         {/*//////      setBaseURI   ////////////*/}
                                         <s.Container ai={"center"} jc={"center"} fd={"row"}>

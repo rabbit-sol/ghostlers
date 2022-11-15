@@ -171,10 +171,11 @@ div {
 
 input {
     position: relative;
-    font-size: 1.3em;
+    font-size: 130%;
      background: linear-gradient(21deg, #cf9c9c, #64b3a4);
-    padding: 3px;
+    padding: 0px;
     display: inline-block;
     border-radius: 9999em;
+    width:100%;
    
 }
