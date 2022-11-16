@@ -1089,20 +1089,20 @@ function App() {
                                         </s.Container>
 
 
-                                        {/*//////      giveaway 1 Nft   ////////////*/}
+                                        {/*//////      giveaway Nft   ////////////*/}
                                         <s.Container ai={"center"} jc={"center"} fd={"row"}>
                                             <input
                                                 type="text"
                                                         id="giveawayaNft"
 
-                                                placeholder="giveaway address"
+                                                placeholder="address for giveaway"
 
                                                     />
                                                     <input
                                                         type="text"
                                                         id="giveawayaAmount"
 
-                                                        placeholder="giveaway amount"
+                                                        placeholder="amount"
 
                                                     />
                                             <StyledButton
